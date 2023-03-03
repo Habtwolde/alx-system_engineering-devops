@@ -1,21 +1,17 @@
 #!/usr/bin/env bash
-# Loops from 1 to 10 and displays:
-#   "bad luck" for the 4th loop iteration
-#   "good luck" for the 8th loop iteration
-#   "Best School" for the other iterations
+# This script is displaying different text in a loop based on conditions
 
-count=0
-
-while [ $count -lt 10 ]
+COUNT=1
+while [ $COUNT -lt 11 ]
 do
-        if [ $count -eq 3 ]
+	if [ $COUNT -eq 4 ]
 	then
-	        echo "bad luck"
-	elif [ $count -eq 7 ]
+		echo "bad luck"
+	elif [ $COUNT -eq 8 ]
 	then
 		echo "good luck"
 	else
 		echo "Best School"
 	fi
-	(( count++ ))
+	COUNT=$(( COUNT + 1 ))
 done

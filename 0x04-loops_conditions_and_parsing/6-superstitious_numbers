@@ -1,21 +1,21 @@
-i#!/usr/bin/env bash
-# Displays numbers from 1 to 20 in addition to:
-#   "bad luck from China" for the 4th loop iteration
-#   "bad luck from Japan" for the 9th loop iteration
-#   "bad luck from Italy" for the 17th loop iteration
+#!/usr/bin/env bash
+# This script is displaying numbers and text in a loop based on conditions
 
-count=1
-
-while [ $count -le 20 ]
+COUNT=1
+while [ $COUNT -lt 21 ]
 do
-        echo "$count"
-	case $count in
-	"4") 
-		echo "bad luck from China";;
-	"9")
-		echo "bad luck from Japan";;
-	"17") 
-		echo "bad luck from Italy";;
+	case $COUNT in
+		4 )
+			echo $COUNT
+			echo "bad luck from China" ;;
+		9 )
+			echo $COUNT
+			echo "bad luck from Japan" ;;
+		17 )
+			echo $COUNT
+			echo "bad luck from Italy" ;;
+		* )
+			echo $COUNT ;;
 	esac
-	(( count++ ))
+	COUNT=$(( COUNT + 1 ))
 done
